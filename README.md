@@ -46,6 +46,9 @@ vim.g.lualine_xkblayout_codes = {
 }
 ```
 
+Show current keymap by command: 
+`:echo libcall(g:XkbSwitchLib, 'Xkb_Switch_getXkbLayout', '')`
+
 ```lua
 --Set before lualine init
 vim.g.lualine_xkblayout_codes = {
