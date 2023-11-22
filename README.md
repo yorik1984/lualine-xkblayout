@@ -14,14 +14,16 @@
 
 Install via your favorite package manager:
 
-#### [packer.nvim](https://github.com/wbthomason/packer.nvim)
+#### [lazy.nvim](https://github.com/folke/lazy.nvim)
 
 ```lua
-use({
-    "yorik1984/lualine-xkblayout",
-    requires = {
-        "nvim-lualine/lualine.nvim",
-        "lyokha/vim-xkbswitch",
+require("lazy").setup({
+    {
+        "yorik1984/lualine-xkblayout",
+        dependencies =  {
+            "nvim-lualine/lualine.nvim",
+            "lyokha/vim-xkbswitch",
+        },
     },
 })
 ```
@@ -58,7 +60,7 @@ vim.g.lualine_xkblayout_codes = {
 require("lualine").setup({
     sections = {
         lualine_a = {
-            { "xkblayout", icon = "" },
+            { "xkblayout", icon = "󰥻" },
         },
     },
 })
